@@ -1,13 +1,12 @@
-# GCP-gamingbook-data-analysis
-インプレスR&amp;Dから出版された「ゲーム開発が変わる！Google Cloud Platform 実践インフラ構築」のSQLなどをまとめたリポジトリです
+# ゲーム開発が変わる！Google Cloud Platform 実践インフラ構築
 
-# Aimingでのデータ分析環境の紹介で紹介したSQLまとめ
+こちらのリポジトリはインプレスR&amp;Dから出版された「ゲーム開発が変わる！Google Cloud Platform 実践インフラ構築」の7章で紹介されるSQLなどをまとめたリポジトリになります。
 
-上記書籍では、BigQueryのSQLについて書いています。書籍から直接手で打つのも煩雑なので利便性を上げるためこちらのページでコピペしやすいように、SQLをまとめます。
+# 第7章「Aimingでのデータ分析環境の紹介」で紹介したSQLまとめ
+
+上記書籍では、AimingでのBigQueryのSQL実例について書いています。書籍から直接手で打つのも煩雑なので利便性を上げるためこちらのページでコピペしやすいように、SQLをまとめます。本章で触れましたが、このSQLは架空のタイトルでのSQLになります。現実のタイトルで使ったSQLではありません。
 
 ## 前提となるテーブル構造
-
-
 
 ### loginテーブルのイメージ
 
@@ -31,10 +30,9 @@
 |8|2015-01-02 12:16:45 UTC|200|
 |3|2015-01-02 12:18:44 UTC|300|
 
-
 ## DAUを求めるSQL
 
-BigQueryを使ってDAU(DailyActiveUser)を求めるSQLは次のようになります。
+BigQueryを使ってDAU(DailyActiveUser)を求めるSQLは次のようになります。詳しい解説に関しては、本書を御覧ください。
 
 ```SQL
 SELECT
@@ -49,6 +47,8 @@ GROUP BY date ORDER BY date;
 ```
 
 ## FQ5を求めるSQL
+
+詳しい解説に関しては、本書を御覧ください。
 
 ```SQL
 SELECT exact_count_distinct(user_id) as value,
@@ -69,6 +69,8 @@ GROUP BY date;
 ```
 
 ## MRPPUを求めるSQL
+
+詳しい解説に関しては、本書を御覧ください。
 
 ```SQL
 SELECT
